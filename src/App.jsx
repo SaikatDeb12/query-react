@@ -5,6 +5,8 @@ import { Menu } from "./pages/menu";
 import { Contact } from "./pages/contact";
 import { Navbar } from "./pages/navbar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import FetchingData from "./Temp";
+import Temp from "./Temp";
 
 function App() {
   const client = new QueryClient({
@@ -15,7 +17,9 @@ function App() {
 
   return (
     <div className="App">
-      <QueryClientProvider client={client}>
+      <Temp />
+      {/* <FetchingData/> */}
+      {/* <QueryClientProvider client={client}>
         <Router>
           <Navbar />
           <Routes>
@@ -25,7 +29,7 @@ function App() {
             <Route path="*" element={<h1>Page Not Found</h1>} />
           </Routes>
         </Router>
-      </QueryClientProvider>
+      </QueryClientProvider> */}
     </div>
   );
 }
